@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const { colors } = require('tailwindcss/defaultTheme')
 
 module.exports = {
   target: ['relaxed', {
@@ -16,6 +17,22 @@ module.exports = {
     }
   },
   theme: {
+    screens: {
+      'sm': {'max': '799px'},
+      // => @media (min-width: 640px) { ... }
+    },
+    colors: {
+      black: colors.black,
+      white: colors.white,
+      gray: colors.gray,
+      red: colors.red,
+      yellow: colors.yellow,
+      orange: colors.orange,
+      green: colors.green,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      purple: colors.purple,
+    },
     extend: {
       borderWidth: {
         '3': '3px',

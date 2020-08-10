@@ -1,0 +1,10 @@
+{{- $address := "" -}}
+{{- if .IsNamedParams }}
+{{- $address = .Get "address" -}}
+{{- else }}
+{{- $address = .Get 0 -}}
+{{- end }}
+{{- if not $address }}
+{{- errorf "Missing required 'address'. Shortcode: 'alert'." -}}
+{{- end }}
+{{- partial "email" (dict "Site" $.Site "Page" . "address" "liet@stemad.net") -}}

@@ -19,7 +19,7 @@
     </div>
     <div class="ax-user">
       <a class="p-2 w-8 h-8 block text-raven-500 hover:text-gray-800 focus:text-gray-800 focus:outline-none" target="_blank" rel="noopener nofollow" href="https://www.google.com/search?q=site:{{ .Site.Params.brand.domain | default .Site.BaseURL }}" title="{{ (T "search" .) }}">
-        {{ partial "svg/search.svg" (dict "class" "fill-current") }}
+        {{ partial "svg/search.svg" (dict "class" "fill-current" "width" "16" "height" "16") }}
       </a>
       {{- $currentPage := . }}
       {{- range (.Site.Menus.main) }}

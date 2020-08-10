@@ -4,7 +4,7 @@
 .ax-logo {
   & img,
   & svg {
-    @apply h-7 w-auto;
+    @apply h-12 w-auto;
   }
 }
 
@@ -16,6 +16,7 @@
 /* layout inner, gutter = mx-4 */
 .ax-l-i {
   @apply flex-grow min-w-0 mx-4 mt-8;
+  @apply flex-wrap
 }
 
 .header {
@@ -25,7 +26,7 @@
   }
 
   & .ax-logo {
-    @apply flex-1;
+    @apply flex-initial;
   }
 
   & .ax-user {
@@ -54,16 +55,17 @@ p.post-subtitle {}
   border: 0;
 }
 
+/*
 @screen sm {
   .ax-logo {
     & img,
     & svg {
-      @apply h-8;
+      @apply h-12;
     }
   }
 
-  /* layout inner gutter */
   .ax-l-i {
     @apply mx-8;
   }
 }
+*/
