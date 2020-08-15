@@ -1,5 +1,5 @@
 {{- if not .address }}
 {{- errorf "Missing required 'address'. Partial: 'alert'." -}}
 {{- end }}
-<style>.e-mail:before {content: attr(data-website) "\0040" attr(data-user); unicode-bidi: bidi-override; direction: rtl; }</style>
+<style>.e-mail:before {content: attr(data-website) ":" attr(data-user) "\0040"; unicode-bidi: bidi-override; direction: rtl; }</style>
 <span data-website="ten.damets" data-user="teil" class="e-mail"></span>
